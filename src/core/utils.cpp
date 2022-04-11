@@ -9,8 +9,6 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <net/if.h>
-#include <spdlog/spdlog.h>
-#include <sstream>
 #include "Logger.h"
 
 ArpFrame make_arp(const MacAddr& sender_mac, const IpAddr& sender_ip,

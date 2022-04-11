@@ -2,6 +2,7 @@
 
 #ifndef _LOGGER_H
 #define _LOGGER_H 1
+// #define SPDLOG_COMPILED_LIB
 
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
@@ -10,17 +11,18 @@
 namespace Logger {
     inline void console_logger_init() {
         spdlog::drop("console");
-        auto console = spdlog::stdout_color_mt("console");
+        auto console_logger = spdlog::stdout_color_mt("console");
+        console_logger->set_pattern("[%Y-%m-%d %H:%M:%S] [%l] %v");
+        spdlog::set_default_logger(console_logger);
     }
 
     inline void file_logger_init(const std::string& log_file_name) {
         spdlog::drop("file_logger");
         auto file_logger = spdlog::basic_logger_mt("file_logger", log_file_name);
-        file_logger->set_pattern("[%Y-%m-%d %H:%M:%S.%e] [%l] %v");
+        file_logger->set_pattern("[%Y-%m-%d %H:%M:%S] %v");
         file_logger->set_level(spdlog::level::trace);
         // spdlog::set_default_logger(file_logger);
     }
-
 
     inline void set_level(spdlog::level::level_enum level) {
         auto console_logger = spdlog::get("console");

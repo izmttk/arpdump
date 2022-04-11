@@ -7,25 +7,20 @@
 #include <net/if_arp.h>
 
 #include <sys/socket.h>
-
 #include <arpa/inet.h>      // 定义网络地址操作
 #include <netinet/ether.h>  // contain ehter_addr
 #include <netinet/in.h>     // contain in_addr
 
-#include <sys/ioctl.h>
-#include <net/if.h>
 #include <netpacket/packet.h>
 
 #include <ifaddrs.h>
 #include <stdexcept>
 
-#include <iostream>
 #include <iomanip>
 #include <sstream>
 #include <string>
 #include <cstring>
 #include <cstdint>
-#include <cstdio>
 
 #define MAC_LEN 6
 #define IP_LEN 4

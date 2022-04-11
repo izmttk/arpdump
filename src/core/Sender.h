@@ -4,7 +4,6 @@
 #define _SENDER_H 1
 
 #include "fundamental.h"
-#include <string>
 #include <mutex>
 
 // singleton

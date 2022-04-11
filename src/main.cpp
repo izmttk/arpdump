@@ -1,10 +1,5 @@
-#include <thread>
-#include <cstdio>
 #include <cstdlib>
-#include <cstring>
 #include <string>
-#include <iostream>
-#include <spdlog/spdlog.h>
 
 #include "CLI/App.hpp"
 #include "CLI/Formatter.hpp"
@@ -13,8 +8,6 @@
 #include "Sniffer.h"
 #include "Spoofer.h"
 #include "core/Logger.h"
-
-
 
 int main(int argc, char *argv[]) {
 

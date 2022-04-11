@@ -4,7 +4,6 @@
 #define _UTILS_H 1
 
 #include "fundamental.h"
-#include <cstdio>
 #include <cstdint>
 
 ArpFrame make_arp(const MacAddr& sender_mac, const IpAddr& sender_ip,

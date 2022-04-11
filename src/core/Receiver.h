@@ -3,18 +3,9 @@
 #ifndef _RECIEVER_H
 #define _RECIEVER_H 1
 
-#include <arpa/inet.h>      // 定义网络地址操作
-#include <netinet/ether.h>  // contain ehter_addr
-#include <netinet/in.h>     // contain in_addr
-
-#include <sys/ioctl.h>
-#include <net/if.h>
-#include <netpacket/packet.h>
-
 #include "fundamental.h"
 #include <mutex>
 #include <functional>
-#include <stdexcept>
 
 // singleton
 class Receiver {

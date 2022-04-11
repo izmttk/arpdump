@@ -3,16 +3,7 @@
 #ifndef _SNIFFER_H
 #define _SNIFFER_H 1
 
-#include <net/ethernet.h>
-#include <net/if.h>
-#include <net/if_arp.h>
-#include <netinet/ether.h>
-#include <netinet/in.h>
-#include <netpacket/packet.h>
-#include <sys/socket.h>
-
 #include <functional>
-#include <string>
 
 #include "core/fundamental.h"
 #include "core/Receiver.h"
