@@ -18,7 +18,7 @@ OBJS := $(SRCS:%.cpp=$(BUILD_DIR)/%.o)
 CXX := g++
 
 # define any compile-time flags
-CXXFLAGS := -Wall -g -std=c++17 -fdiagnostics-color=always -pthread
+CXXFLAGS := -Wall -g -std=c++17 -fdiagnostics-color=always
 
 # define any directories containing header files other than /usr/include
 #
@@ -32,7 +32,7 @@ LFLAGS := -L./lib
 # define any libraries to link into executable:
 #   if I want to link in libraries (libx.so or libx.a) I use the -llibname 
 #   option, something like (this will link in libmylib.so and libm.so:
-LIBS := -lm
+LIBS := 
 
 .PRECIOUS: $(BUILD_DIR)/%.o
 

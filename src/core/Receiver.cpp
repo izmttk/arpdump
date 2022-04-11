@@ -1,7 +1,6 @@
 #include "Receiver.h"
 #include "utils.h"
 #include <unistd.h>
-#include <spdlog/spdlog.h>
 #include "Logger.h"
 
 Receiver *Receiver::instance = nullptr;

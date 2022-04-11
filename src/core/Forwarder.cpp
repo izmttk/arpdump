@@ -1,6 +1,5 @@
 #include "Forwarder.h"
 #include "Logger.h"
-#include <spdlog/spdlog.h>
 
 Forwarder::Forwarder(const std::string& interface_name)
 :fd(-1),

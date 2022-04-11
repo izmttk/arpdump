@@ -5,7 +5,6 @@
 #include <mutex>
 #include <condition_variable>
 
-#include <spdlog/spdlog.h>
 #include "core/Logger.h"
 
 Spoofer::Spoofer(const std::string& interface_name, const std::chrono::seconds& interval)

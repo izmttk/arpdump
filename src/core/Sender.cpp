@@ -1,7 +1,6 @@
 #include "Sender.h"
 #include "utils.h"
 #include <unistd.h>
-#include <spdlog/spdlog.h>
 #include "Logger.h"
 
 Sender *Sender::instance = nullptr;

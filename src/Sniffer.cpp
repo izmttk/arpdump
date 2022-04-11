@@ -1,6 +1,5 @@
 #include "Sniffer.h"
 #include "core/utils.h"
-#include <spdlog/spdlog.h>
 #include "core/Logger.h"
 
 Sniffer::Sniffer(const std::string& interface_name)
