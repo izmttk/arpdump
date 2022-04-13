@@ -12,7 +12,7 @@ namespace Logger {
     inline void console_logger_init() {
         spdlog::drop("console");
         auto console_logger = spdlog::stdout_color_mt("console");
-        console_logger->set_pattern("[%Y-%m-%d %H:%M:%S] [%l] %v");
+        console_logger->set_pattern("[%Y-%m-%d %H:%M:%S] [%^%l%$] %v");
         spdlog::set_default_logger(console_logger);
     }
 

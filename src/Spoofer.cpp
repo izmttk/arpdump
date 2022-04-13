@@ -79,7 +79,7 @@ void Spoofer::spoof(
     MacAddr target_ip_mac;
     Logger::debug("waiting for arp reply of {}...", target_ip.to_string());
     this->receiver.set_timeout(std::chrono::seconds(10));
-    receiver.start([&, this](const ArpFrame& arp) {
+    receiver.start([&](const ArpFrame& arp) {
         if (arp.oper == htons(ARPOP_REPLY)) {
             if(target_ip == arp.spa) {
                 target_ip_mac = arp.sha;
@@ -151,7 +151,7 @@ void Spoofer::spoof(
     MacAddr spoofed_mac;
     Logger::debug("waiting for arp reply of {}...", spoofed_ip.to_string());
     this->receiver.set_timeout(std::chrono::seconds(10));
-    receiver.start([&, this](const ArpFrame& arp) {
+    receiver.start([&](const ArpFrame& arp) {
         if (arp.oper == htons(ARPOP_REPLY)) {
             if(spoofed_ip == arp.spa) {
                 spoofed_mac = arp.sha;

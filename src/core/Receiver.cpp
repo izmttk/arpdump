@@ -114,7 +114,6 @@ void Receiver::start(std::function<void(const ArpFrame&)> callback) {
     while (true) {
         if(this->timeout != std::chrono::seconds(0)) {
             std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-            std::chrono::duration<double> elapsed = end - start;
             if(end - start > this->timeout) {
                 break;
             }

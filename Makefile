@@ -18,7 +18,7 @@ OBJS := $(SRCS:%.cpp=$(BUILD_DIR)/%.o)
 CXX := g++
 
 # define any compile-time flags
-CXXFLAGS := -Wall -g -std=c++17 -fdiagnostics-color=always -DSPDLOG_COMPILED_LIB
+CXXFLAGS := -Wall -g -std=c++17 -fdiagnostics-color=always -DSPDLOG_COMPILED_LIB -pthread
 
 # define any directories containing header files other than /usr/include
 #
