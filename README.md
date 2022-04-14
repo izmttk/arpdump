@@ -1,5 +1,7 @@
 # arpdump
 
+This tool was originally developed for a computer network course assignment
+
 ## Usage
 
 ```plain
@@ -7,7 +9,7 @@ arp sniffing and spoofing tool
 Usage: ./arpdump [OPTIONS] [spoofed-ip]
 
 Positionals:
-  spoofed-ip TEXT Needs: --spoof    ip of host you want to spoof
+  spoofed-ip TEXT Needs: --spoof         ip of host you want to spoof
 
 Options:
   -h,--help                              Print this help message and exit
@@ -37,17 +39,18 @@ sudo ./arpdump -i wlo1
 ```plain
 example:
 
-victim ip:  192.168.137.179
-victim mac: a8:9c:ed:c1:e8:36
+ victim ip:  192.168.137.179
+victim mac:  a8:9c:ed:c1:e8:36
 
-my ip:  192.168.137.238
-my mac: dc:71:96:22:a9:c5
+    our ip:  192.168.137.238
+   our mac:  dc:71:96:22:a9:c5
 
-gateway ip: 192.168.137.1
+gateway ip:  192.168.137.1
 ```
 
-Suppose we want to deceive victim our machine is gateway.
-The command below a equivalent.
+Suppose we want to trick the victim that our machine is gateway.
+
+The commands below are equivalent.
 
 ```bash
 # sending arp spoofing message and forward ethernet frame from victim to real gateway
